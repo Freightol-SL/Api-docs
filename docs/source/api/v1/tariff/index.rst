@@ -16,9 +16,10 @@ TariffReport
     .. code-tab:: bash
 
         $ curl -X 'POST' \
-            'https://localhost:5011/v1/tariff' \
+            'https://<env>.freightol.com/v1/tariff' \
             -H "Content-Type: application/json" \
-            -H "Authorization: Bearer <token>"
+            -H "Authorization: Bearer <token>" \
+            -d @body.json
 
 **Example request Http**:
 
@@ -39,7 +40,7 @@ Name                     Type         Constraint       Description
 =====================   ===========   =============    ================================================================
 ContractNumber           String        Mandatory         Contract number
 Name                     String        Optional          Name
-Status   	               Int           Optional          Status
+Status   	             Int           Optional          Status
 FromDate                 DateTime      Mandatory         Starting date
 ToDate                   DateTime      Optional          Finishing date
 =====================   ===========   =============    ================================================================
