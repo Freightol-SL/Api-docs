@@ -16,7 +16,7 @@ TariffReport
     .. code-tab:: bash
 
         $ curl -X 'POST' \
-            'https://<env>.freightol.com/v1/tariff' \
+            'https://<env>.freightol.com/v1/tariff/getall' \
             -H "Content-Type: application/json" \
             -H "Authorization: Bearer <token>" \
             -d @body.json
