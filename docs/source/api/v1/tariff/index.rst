@@ -25,7 +25,7 @@ TariffReport
 
 .. sourcecode:: json
     {
-        "name": null,
+        "tariffName": null,
         "contractNumber": "CL131839T",
         "delegationId": null,
         "fromDate": "2024-09-01T00:00:00.000Z",
@@ -41,7 +41,7 @@ Name                     Type         Constraint       Description
 ContractNumber           String        Mandatory         Contract number
 FromDate                 DateTime      Mandatory         Starting date
 ToDate                   DateTime      Optional          Finishing date
-Name                     String        Optional          Name
+TariffName               String        Optional          Tariff name
 Status   	             Int           Optional          Status
 =====================   ===========   =============    ================================================================
 
