@@ -2,7 +2,7 @@
 PickUp Time
 =============================
 
-PickUp Time
+PickUp Times
 ----------------
 Receives the Id of the shipment, and returns a list valid PickUp times.
 

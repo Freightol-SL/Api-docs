@@ -24,6 +24,7 @@ Request to upload a maritime tariff to the system.
 **Example request Http**:
 
 .. sourcecode:: json
+
     {
         "contractReference": "Test contract code",
         "carrierSCAC": "MAEU",
@@ -44,26 +45,24 @@ The query params are like,
 
 * Upload Tariff model:
 
-===========================   ====================   ===============================================
-    Name                          Type                   Description
-===========================   ====================   ===============================================
-    ContractReference             String	               Contract reference
-    CarrierSCAC                   String	               Carrier SCACexport type first = {second}
-    Files                         List<UploadFileModel>    List of files
-    Name                          String?	               Tariff name
-    ExternalId                    String?	               External id
-    Comments                      List<string>?            List of comments for the tariff
-===========================   ====================   ===============================================
+===========================   =====================   ===============================================
+Name                          Type                    Description
+===========================   =====================   ===============================================
+ContractReference             String	               Contract reference
+CarrierSCAC                   String	               Carrier SCAC
+Files                         List<UploadFileModel>    List of files
+Name                          String?	               Tariff name
+ExternalId                    String?	               External id
+Comments                      List<string>?            List of comments for the tariff
+===========================   =====================   ===============================================
 
 * Upload File model:
 
 ===========================   ====================   ===============================================
-    Name                          Type                   Description
+Name                          Type                   Description
 ===========================   ====================   ===============================================
-
-    File                          String	               File content in base64
-    FileName                      String	               File name with extension
-
+File                          String	               File content in base64
+FileName                      String	               File name with extension
 ===========================   ====================   ===============================================
 
 
@@ -89,6 +88,7 @@ Request to retrieve the tariff info matching the filters.
 **Example request Http**:
 
 .. sourcecode:: json
+
     {
         "tariffName": null,
         "contractNumber": "CL131839T",
@@ -109,6 +109,7 @@ ToDate                   DateTime      Optional          Finishing date
 TariffName               String        Optional          Tariff name
 Status   	             Int           Optional          Status
 =====================   ===========   =============    ================================================================
+
 
 **Example response**:
 
