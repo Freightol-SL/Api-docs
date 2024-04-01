@@ -3,7 +3,7 @@
 # -- Project information
 
 project = 'Freightol'
-copyright = '2021, Freightol'
+copyright = '2024, Freightol'
 author = 'Freightol'
 
 release = '1.0'
