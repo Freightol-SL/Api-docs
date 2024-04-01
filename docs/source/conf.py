@@ -13,6 +13,7 @@ version = '1.0.0'
 
 extensions = [
     'sphinx.ext.autosectionlabel',
+    'sphinx.ext.autosummary',
     'sphinx.ext.autodoc',
     'sphinx.ext.intersphinx',
     'sphinxcontrib.httpdomain',

@@ -1,10 +1,11 @@
 # Packages required to build docs, independent of application dependencies
 
-Sphinx==4.3.0
+sphinx==5.0.2
 Pygments==2.10.0
 
 sphinx_rtd_theme==1.0.0
-sphinx-tabs==3.2.0
+sphinxcontrib-applehelp==1.0.2
+sphinx-tabs==3.4.5
 sphinx-intl==2.0.1
 
 readthedocs-sphinx-search==0.1.1

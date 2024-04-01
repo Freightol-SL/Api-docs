@@ -6,7 +6,8 @@ Shipment Tracking Enable
    :toctree: generated
    
 Shipment IsActiveTracking
-----------------
+--------------------------------
+
 Receives the shipment id and the status (true, false), and returns an HTTP response code.
 
 **Example request**:
