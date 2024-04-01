@@ -2,14 +2,79 @@
 Tariff
 =====================
 
-Request to retrieve the tariff info matching the filters.
+Upload a maritime tariff.
+--------------------------
+
+Request to upload a maritime tariff to the system.
+
+**Example request**:
+    
+.. http:post:: /v1/tariff/upload
+
+
+.. tabs::
+    .. code-tab:: bash
+
+        $ curl -X 'POST' \
+            'https://<env>.freightol.com/v1/tariff/upload' \
+            -H "Content-Type: application/json" \
+            -H "Authorization: Bearer <token>" \
+            -d @body.json
+
+**Example request Http**:
+
+.. sourcecode:: json
+    {
+        "contractReference": "Test contract code",
+        "carrierSCAC": "MAEU",
+        "files": [
+            {
+                "file": "data:application/pdf;base64,JVBERi0xLjQ]...",
+                "fileName": "test.pdf"
+            }
+        ],
+        "name": "Test tariff name",
+        "externalId": "123",
+        "comments": [
+            "string"
+        ]
+    }
+
+The query params are like,
+
+* Upload Tariff model:
+
+===========================   ====================   ===============================================
+    Name                          Type                   Description
+===========================   ====================   ===============================================
+    ContractReference             String	               Contract reference
+    CarrierSCAC                   String	               Carrier SCACexport type first = {second}
+    Files                         List<UploadFileModel>    List of files
+    Name                          String?	               Tariff name
+    ExternalId                    String?	               External id
+    Comments                      List<string>?            List of comments for the tariff
+===========================   ====================   ===============================================
+
+* Upload File model:
+
+===========================   ====================   ===============================================
+    Name                          Type                   Description
+===========================   ====================   ===============================================
+
+    File                          String	               File content in base64
+    FileName                      String	               File name with extension
+
+===========================   ====================   ===============================================
+
 
 TariffReport
 --------------------------
 
+Request to retrieve the tariff info matching the filters.
+
 **Example request**:
     
-.. http:get:: /v1/tariff
+.. http:post:: /v1/tariff
 
 
 .. tabs::
@@ -1333,6 +1398,7 @@ Status   	             Int           Optional          Status
   Criteria                      List<string>           List of criteria
   ExtraInfo                     String                 Extra info
 ===========================   ====================   ===============================================
+
 
 .. autosummary::
    :toctree: generated
